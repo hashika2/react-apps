@@ -6,11 +6,11 @@ class Contact extends Component{
     render(){
         const {name,email,phone}=this.props
         return(
-            <div>
+            <div className="card card-body mb-3">
                 <h3>{name}</h3>
-                <ul>
-                <li>email :{email}</li>
-                <li>phone :{phone}</li>
+                <ul className="list-group">
+                <li className="list-group-item">email :{email}</li>
+                <li className="list-group-item">phone :{phone}</li>
                 </ul>
                 
             </div>
