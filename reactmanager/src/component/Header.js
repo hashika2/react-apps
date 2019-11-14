@@ -14,7 +14,7 @@ function Header(prop){
                 <a href="/" className="nav-link">Home</a>
             </li>
             <li className="nav-item">
-                <a href="/" className="nav-link">Ho</a>
+                <a href="/" className="nav-link">About</a>
             </li>
         </ul>
     </div>
