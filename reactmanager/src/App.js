@@ -2,22 +2,24 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Contacts from './component/Contacts';
-import Header from './component/Header';
+import Header from './component/layouts/Header';
+import AddContact from './component/contact/AddContact'
 // import 'bootstrap/dist/css/bootstrap.min.js';
 
-import {Provider} from './Context';
+
 
 function App() {
   
   return (
-    <Provider>
+    
     <div className="App">
     <Header />
+    <AddContact/>
     <Contacts />
    
       {/* <label htmlFor="name">name</label> */}
     </div>
-    </Provider>
+    
   );
 }
 
