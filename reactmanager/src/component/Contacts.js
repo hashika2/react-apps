@@ -39,7 +39,10 @@ deleteContact(id){
     contacts:newContacts
   });
 }
-   
+ addContact(id){
+  const {contacts} =this.state;
+  
+ }  
     render(){
       const item = this.state.contacts.map((contact)=>{
         return(

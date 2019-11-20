@@ -18,11 +18,11 @@ class AddComponent extends Component{
     }
     onChange=(e)=>this.setState({[e.target.name]:e.target.value});
 
-    static defaultProps={
-        name:"hashika",
-        email:"hashika@gmai.com",
-        phone:"12324345"
-    }
+    // static defaultProps={
+    //     name:"hashika",
+    //     email:"hashika@gmai.com",
+    //     phone:"12324345"
+    // }
        render(){
         const {email,phone,name} = this.props;
         return(

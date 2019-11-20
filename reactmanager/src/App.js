@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Contacts from './component/Contacts';
 import Header from './component/layouts/Header';
-import AddContact_ref from './component/contact/AddContact_ref'
+import AddContact from './component/contact/AddContact'
 // import 'bootstrap/dist/css/bootstrap.min.js';
 
 
@@ -14,7 +14,7 @@ function App() {
     
     <div className="App">
     <Header />
-    <AddContact_ref/>
+    <AddContact/>
     <Contacts />
    
       {/* <label htmlFor="name">name</label> */}
