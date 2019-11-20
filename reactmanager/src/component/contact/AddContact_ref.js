@@ -14,7 +14,12 @@ class AddComponent extends Component{
     }
     onSubmit=(e)=>{
         e.preventDefault();
-        
+        const contact={
+            name:this.nameInput.current.value,
+            email:this.emailInput.current.value,
+            phone:this.phoneInput.current.value
+        }
+        console.log(contact);
     }
     onChange=(e)=>this.setState({[e.target.name]:e.target.value});
 
@@ -34,7 +39,7 @@ class AddComponent extends Component{
                             <label htmlFor="name">Name</label><br></br>
                             <input type="text" name="name" className="from-control form-control-lg" placeholder="Enter Name ...."
                              defaultValue={name}
-                            
+                             ref={this.nameInput}
                             ></input>
                            
                         </div>
@@ -42,7 +47,7 @@ class AddComponent extends Component{
                             <label htmlFor="name">Email</label><br></br>
                             <input type="email" name="email" className="from-control form-control-lg" placeholder="Enter Email ...."
                              defaultValue={email}
-                             
+                             ref={this.emailInput}
                              ></input>
                             
                         </div>
@@ -50,7 +55,7 @@ class AddComponent extends Component{
                             <label htmlFor="name">Phone</label><br></br>
                             <input type="text" name="phone" className="from-control form-control-lg" placeholder="Enter Phone ...." 
                             defaultValue={phone}
-                            
+                            ref={this.phoneInput}
                             ></input>
                         </div>
                         <input className="btn btn-light btn-block" value="Add Contact" type="submit"></input> 
