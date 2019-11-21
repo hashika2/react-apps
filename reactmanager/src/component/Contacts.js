@@ -5,6 +5,18 @@ import Contact from './contact/Contact';
 //import {Consumer} from '../Context';
 //import { validate } from '@babel/types';
 
+// const reducer =(state,action)=>{
+//   switch(action.type){
+//     case 'Add_Contact':
+//       return{
+//         ...state,
+//         contacts:[action.payload,
+//         ...state.contacts]
+//       };
+//       default:
+//         return state;
+//   }
+// }
 class Contacts extends Component{
 
   state={
@@ -39,10 +51,10 @@ deleteContact(id){
     contacts:newContacts
   });
 }
- addContact(id){
-  const {contacts} =this.state;
-  
- }  
+//  addContact(id){
+//   const {contacts} =this.state;
+
+//  }  
     render(){
       const item = this.state.contacts.map((contact)=>{
         return(
