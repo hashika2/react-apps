@@ -24,7 +24,7 @@ class Contact extends Component{
             <div className="card card-body mb-3">
                 <h3>{name} <i onClick={()=>{
                  this.setState({showContactInfo:!this.state.showContactInfo});
-                 }} className="fas fa-sort-down"style={{cursor:'pointer'}}/><i className="fas fa-times"style={{cursor:'pointer',float:'right',color:'red'}} 
+                 }} className="fa fa-sort-down"style={{cursor:'pointer'}}/><i className="fa fa-times"style={{cursor:'pointer',float:'right',color:'red'}} 
                  onClick={this.deleteOnClick}></i></h3>
                 {showContactInfo?(<ul className="list-group">
                 <li className="list-group-item">email :{email}</li>

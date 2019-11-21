@@ -58,7 +58,9 @@ deleteContact(id){
     render(){
       const item = this.state.contacts.map((contact)=>{
         return(
-          <React.Fragment><Contact
+          <React.Fragment>
+            <h1 className="display-4 mb-2"><span className="text-danger">Contact</span> List</h1>
+            <Contact
             key={contact.id}
             name={contact.name}
             email={contact.email}

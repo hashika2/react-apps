@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Contacts from './component/Contacts';
 import Header from './component/layouts/Header';
-import AddContact from './component/contact/AddContact'
+import AddContact from './component/contact/AddContact';
+import About from './component/pages/About';
+import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 // import 'bootstrap/dist/css/bootstrap.min.js';
 
 
@@ -11,14 +13,23 @@ import AddContact from './component/contact/AddContact'
 function App() {
   
   return (
-    
-    <div className="App">
+    <Router>
+      <div className="App">
     <Header />
-    <AddContact/>
-    <Contacts />
+      <div className="container">
+      <Switch>
+        <Route exact path="/" component={Contacts}/>
+        <Route exact path="/about" component={About}/>
+        <Route exact path="/input" component={AddContact}/>
+      </Switch>
+      
+      </div>
+      
    
       {/* <label htmlFor="name">name</label> */}
     </div>
+    </Router>
+    
     
   );
 }
