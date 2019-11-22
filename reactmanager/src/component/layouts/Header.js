@@ -1,5 +1,6 @@
 import React from 'react';
 import { smart } from '@babel/template';
+import {Link} from 'react-router-dom';
 
 
 function Header(prop){
@@ -7,14 +8,14 @@ function Header(prop){
     return(
      <nav className="navbar navbar-expand-sm navbar=dark bg-danger mb-3 py-0">
          <div className="container">
-    <a href="/" className="navbar-brand">{hedding}</a>
+    <Link to="/" className="navbar-brand"><i className="fa fa-home"></i>{hedding}</Link>
     <div>
         <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-                <a href="/" className="nav-link">Home</a>
+            <Link to="/input" className="navbar-brand"><i className="fa fa-plus"></i>Add</Link>
             </li>
             <li className="nav-item">
-                <a href="/" className="nav-link">About</a>
+            <Link to="/About" className="navbar-brand"><i className="fa fa-question"></i>About</Link>
             </li>
         </ul>
     </div>
