@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { constants } from 'crypto';
 import Contact from './contact/Contact';
+import axios from 'axios';
 
 //import {Consumer} from '../Context';
 //import { validate } from '@babel/types';
@@ -20,27 +21,15 @@ import Contact from './contact/Contact';
 class Contacts extends Component{
 
   state={
-    contacts:[
-        {
-            id:1,
-            name:'hashika',
-            email:'hashika@gamail.com',
-            phone:'055-555-555'
-        },
-        {
-            id:2,
-            name:'karun',
-            email:'karuna@gamail.com',
-            phone:'055-3445-555'
-        },
-        {
-            id:3,
-            name:'kasun',
-            email:'kasuna@gamail.com',
-            phone:'0553-455-555'
-        }
-
-    ]
+    contacts:[]
+}
+componentDidMount(){
+  axios
+  .get
+  ('https://jsonplaceholder.typicode.com/users')
+  .then(res=>this.setState({
+    contacts:res.data
+  }))
 }
 deleteContact(id){
  const {contacts} =this.state;
@@ -55,11 +44,13 @@ deleteContact(id){
 //   const {contacts} =this.state;
 
 //  }  
+
     render(){
       const item = this.state.contacts.map((contact)=>{
         return(
+          
           <React.Fragment>
-            <h1 className="display-4 mb-2"><span className="text-danger">Contact</span> List</h1>
+
             <Contact
             key={contact.id}
             name={contact.name}
