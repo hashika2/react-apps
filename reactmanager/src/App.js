@@ -4,6 +4,7 @@ import './App.css';
 import Contacts from './component/Contacts';
 import Header from './component/layouts/Header';
 import AddContact from './component/contact/AddContact';
+import EditContact from './component/contact/EditContact';
 import About from './component/pages/About';
 import NotFound from './component/pages/NotFound';
 import Test from './component/test/Test';
@@ -25,7 +26,9 @@ function App() {
         <Route exact path="/about/:id" component={About}/>
         <Route exact path="/input" component={AddContact}/>
         <Route exact path="/test" component={Test}/>
+        <Route exact path="/contact/edit/:id" component={EditContact}/>
         <Route component={NotFound}/>
+        
         
       </Switch>
       </div>

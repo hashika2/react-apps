@@ -23,13 +23,13 @@ class Contacts extends Component{
   state={
     contacts:[]
 }
-componentDidMount(){
-  axios
+async componentDidMount(){
+ const res =await axios
   .get
-  ('https://jsonplaceholder.typicode.com/users')
-  .then(res=>this.setState({
-    contacts:res.data
-  }))
+  ('https://jsonplaceholder.typicode.com/users');
+
+this.setState({contacts:res.data});
+  
 }
 deleteContact(id){
  const {contacts} =this.state;
@@ -57,7 +57,8 @@ deleteContact(id){
             email={contact.email}
             phone={contact.phone}
             contact={contact} deleteClickHandler={this.deleteContact.bind(this,contact.id)}
-          /></React.Fragment>
+          />
+          </React.Fragment>
         )
       })
       return(

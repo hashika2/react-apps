@@ -3,9 +3,10 @@ import uuid from 'uuid';
 import Contacts from '../Contacts';
 import TextInputContact from '../layouts/TextInputGroup';
 import Axios from "axios";
+import Link from 'react-router-dom';
 
 
-class AddComponent extends Component{
+class EditComponent extends Component{
     constructor(props){
         super(props);
 
@@ -43,7 +44,7 @@ class AddComponent extends Component{
         const {email,phone,name} = this.props;
         return(
             <div className="card mb-3">
-                <div className="card-header">Add Contact</div>
+                <div className="card-header">Edit Contact</div>
                 <div className="card-body">
                     <form onSubmit={this.onSubmit.bind(this)}>
                        <TextInputContact
@@ -70,11 +71,11 @@ class AddComponent extends Component{
                             
                             ></input>
                         </div>
-                        <input className="btn btn-light btn-block" value="Add Contact" type="submit"></input> 
+                        <input className="btn btn-light btn-block" value="Update Contact" type="submit"></input> 
                     </form>
                 </div>
             </div>
         );
     }
 }
-export default AddComponent; 
+export default EditComponent; 
