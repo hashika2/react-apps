@@ -1,8 +1,7 @@
 import React from 'react';
-import { importDeclaration } from '@babel/types';
 import SearchBar from './SearchBar';
 import unsplash from './unsplash';
-import axios from 'axios';
+import ImageList from './ImageList';
 
 class App extends React.Component{
     state ={ images:[]};
@@ -12,7 +11,7 @@ class App extends React.Component{
             params:{ query:term },
            
         });
-        console.log(this);
+      
        this.setState({images :response.data.results});
     }
     render(){
@@ -20,7 +19,7 @@ class App extends React.Component{
             <div className="ui container" style={{marginTop:'10px'}}>
                 <SearchBar onSubmit={this.onSearchSubmit}/>
                 Found :{this.state.images.length} images
-                
+                <ImageList images= {this.state.images}/>
             </div>)
     }
    
