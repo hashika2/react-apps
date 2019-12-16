@@ -1,5 +1,6 @@
 import JasonPlaceholder from '../api/jsonPlaceholder'
 
+
 export const fetchPosts= () =>async dispatch =>{
     const response =await JasonPlaceholder.get('/posts')
    

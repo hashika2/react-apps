@@ -1,6 +1,6 @@
-import React from 'react';
+import postReducer from './postReducer';
 import {combineReducers} from 'redux';
 
 export default combineReducers({
-    replaceMe:()=>'hai react'
+    posts:postReducer
 })
