@@ -5,17 +5,14 @@ export const fetchPosts= () =>async dispatch =>{
     const response =await JasonPlaceholder.get('/posts')
    
            dispatch({
-               type:"FETCH_POST",
-               payload:response
+               type:'FETCH_POST',
+               payload:response.data
             }) 
         }
-    
-
-    
- 
-//Tatally fine
-// export const selectPost=()=>{
-//     return{
-//         type:'SELECT_POST'
-//     }
-// }
+export const fetchUser=(id) =>async dispatch =>{
+    const response =await JasonPlaceholder.get(`/users/$id`);
+          dispatch({
+             type:'FETCH_USER',
+             payload:response.data
+         })
+}
